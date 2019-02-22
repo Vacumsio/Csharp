@@ -13,7 +13,7 @@ namespace lesson_2_task_1
         static void Main(string[] args)
         {
             var a = 8;
-            var b = 15;
+            var b = 5;
             var c = 7;
 
             Console.WriteLine(Math.Max(a, Math.Max(b, c)));
