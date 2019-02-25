@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * нужно ли человеку похудеть, набрать вес или всё в норме.
 б) *Рассчитать, на сколько кг похудеть или сколько кг набрать для нормализации веса.
 */
-namespace lesson_2_task_4
+namespace lesson_2_task_5
 {
     class Program
     {

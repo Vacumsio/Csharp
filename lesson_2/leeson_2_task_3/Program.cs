@@ -11,7 +11,7 @@ using System.Threading.Tasks;
  * С помощью цикла do while ограничить ввод пароля тремя попытками.
 */
 
-namespace leeson_2_task_3
+namespace leeson_2_task_4
 {
     class Program
     {
@@ -35,9 +35,9 @@ namespace leeson_2_task_3
                         Console.ReadKey();
                         break;
                     }
-                    else Console.WriteLine("Неверно указан Логин."); tryies++; continue;
+                    else Console.WriteLine("Неверно указан Логин."); tryies++;
                 }
-                else Console.WriteLine("Неверно указан Логин."); tryies++; continue;
+                else Console.WriteLine("Неверно указан Логин."); tryies++;
 
                 
             } while (tryies < 3);

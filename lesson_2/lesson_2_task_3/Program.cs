@@ -13,12 +13,11 @@ namespace lesson_2_task_3
         static void Main(string[] args)
         {
             int sum = 0;
-            int num = 0;
-
-            Console.WriteLine("Введите число: ");
+            int num = 0;                       
 
             do
             {
+                Console.WriteLine("Введите число: ");
                 num = int.Parse(Console.ReadLine());
                 if (num > 0 && num % 2 == 1)
                     sum += num;

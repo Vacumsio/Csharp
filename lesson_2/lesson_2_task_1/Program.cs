@@ -16,7 +16,7 @@ namespace lesson_2_task_1
             var b = 5;
             var c = 7;
 
-            Console.WriteLine(Math.Max(a, Math.Max(b, c)));
+            Console.WriteLine(Math.Min(a, Math.Min(b, c)));
             Console.ReadKey();
         }
     }
