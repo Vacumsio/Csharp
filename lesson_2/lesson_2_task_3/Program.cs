@@ -15,6 +15,8 @@ namespace lesson_2_task_3
             int sum = 0;
             int num = 0;
 
+            Console.WriteLine("Введите число: ");
+
             do
             {
                 num = int.Parse(Console.ReadLine());
@@ -23,7 +25,8 @@ namespace lesson_2_task_3
 
             } while (num != 0);
 
-            Console.WriteLine("Sum: " + sum);
+            Console.WriteLine($"Сумма нечетных числе равна {sum}");
+            Console.ReadKey();          
         }
     }
 }
