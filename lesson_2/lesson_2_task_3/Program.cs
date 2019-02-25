@@ -10,29 +10,20 @@ namespace lesson_2_task_3
 {
     class Program
     {
-        static int count(int s)
-        {
-            
-            return s;
-        }
-
         static void Main(string[] args)
         {
-            int x;
-            int s = 0;
-            Console.WriteLine("Введите число");        
-                do
-                {
-                    string str = Console.ReadLine();
-                    x = Convert.ToInt32(str);
-                    if (x % 2 != 0) s = +x;
-                    else
-                    {
-                        if (x == 0)
-                        Console.WriteLine(s);
-                        Console.ReadKey();
-                    }
-                } while (x != 0 || x<0);
+            int sum = 0;
+            int num = 0;
+
+            do
+            {
+                num = int.Parse(Console.ReadLine());
+                if (num > 0 && num % 2 == 1)
+                    sum += num;
+
+            } while (num != 0);
+
+            Console.WriteLine("Sum: " + sum);
         }
     }
 }
