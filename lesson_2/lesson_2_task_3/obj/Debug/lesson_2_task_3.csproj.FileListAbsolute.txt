@@ -1,6 +1,0 @@
-E:\GIT_projects\CSharp\lesson_2\lesson_2_task_3\bin\Debug\lesson_2_task_3.exe
-E:\GIT_projects\CSharp\lesson_2\lesson_2_task_3\bin\Debug\lesson_2_task_3.pdb
-E:\GIT_projects\CSharp\lesson_2\lesson_2_task_3\obj\Debug\lesson_2_task_3.csprojAssemblyReference.cache
-E:\GIT_projects\CSharp\lesson_2\lesson_2_task_3\obj\Debug\lesson_2_task_3.csproj.CoreCompileInputs.cache
-E:\GIT_projects\CSharp\lesson_2\lesson_2_task_3\obj\Debug\lesson_2_task_3.exe
-E:\GIT_projects\CSharp\lesson_2\lesson_2_task_3\obj\Debug\lesson_2_task_3.pdb
