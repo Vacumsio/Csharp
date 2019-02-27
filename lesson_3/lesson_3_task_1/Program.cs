@@ -48,7 +48,7 @@ namespace lesson_3_task_1
                 return res;
             }
 
-            public string ToString()
+            public override string ToString()
             {
                 return $"{a} {b}";
             }
