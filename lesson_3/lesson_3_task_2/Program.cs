@@ -18,33 +18,17 @@ namespace lesson_3_task_2
         {
             int x;
             int summ = 0;
-            string s;
+            bool success;
             do
             {
                 Console.WriteLine(message);
-                s = Console.ReadLine();
-                bool success = Int32.TryParse(s, out x);
-                if (success)
+                success = Int32.TryParse(Console.ReadLine(), out x);
+                if (x % 2 != 0 && x > 0)
                 {
-                    if (x % 2 != 0 && x > 0)
-                    {
-                        summ += x;
-                        continue;
-                    }
-                    else
-                    {
-                        if (x % 2 == 0 && x > 0)
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            if (x == 0) return summ;
-                        }
-                    }
+                    summ += x;
                 }
-                else continue;
-            } while (true);
+            } while (x!=0 || !success);
+            return summ;
         }
 
         static void Main()
