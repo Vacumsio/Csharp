@@ -77,17 +77,13 @@ namespace lesson_4
 
             StreamWriter file = new StreamWriter(@"data.txt");
             file.WriteLine(sb);
-            file.Close();       
-            
+            file.Close();                   
             Console.ReadKey();
             Console.Clear();
 
             Console.WriteLine("2nd task");
-
             ArrayInput.LetTheMountainCome();
-
             Console.ReadKey();
-
             Console.Clear();
 
             Console.WriteLine("3rd task");
