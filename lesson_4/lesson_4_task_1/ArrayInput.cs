@@ -12,10 +12,10 @@ using System.Collections.Generic;
 
 namespace lesson_4
 {
-    class ArrayInput
-    {
+    public class ArrayInput
+    {       
         public static bool FilePath(string path)
-        {
+        {            
             try
             {
                 string _path = path;
@@ -28,7 +28,7 @@ namespace lesson_4
 
         public static int[] Array()
         {                        
-            string inputPath = @"E:\GIT_projects\CSharp\lesson_4\lesson_4_task_1\dta.txt";
+            string inputPath = @"data.txt";
             FilePath(inputPath);
             var fs = new FileStream(inputPath, FileMode.Open, FileAccess.Read);
             string content;
@@ -39,8 +39,9 @@ namespace lesson_4
             }
 
             string[] numbers = content.Split(new char[] { ' ' });
-            int[] arr = new int[numbers.Length];
-            for (int i = 0; i < numbers.Length; i++)
+            int[] arr = new int[numbers.Length-1];
+
+            for (int i = 0; i < numbers.Length-1; i++)
             {
                 arr[i] = int.Parse(numbers[i]);
                 i++;
@@ -48,9 +49,8 @@ namespace lesson_4
             return arr;
         }
 
-        static void LetTheMountainCome()
+        public static void LetTheMountainCome()
         {
-
             int[] arr = Array();
 
             int countThree = 0;
@@ -62,6 +62,7 @@ namespace lesson_4
                     countThree++;
                 }
             }
+
             Console.WriteLine($"В данном массиве {countThree} пар чисел");
             Console.ReadKey();
         }

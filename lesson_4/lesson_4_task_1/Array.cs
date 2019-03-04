@@ -38,7 +38,7 @@ namespace lesson_4
             return countThree;
         }
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int [] arr = MakeArray();
             int count = CountThree(arr);
@@ -51,7 +51,7 @@ namespace lesson_4
             }            
             Console.WriteLine(sb.ToString());
 
-            StreamWriter file = new StreamWriter(@"E:\GIT_projects\CSharp\lesson_4\lesson_4_task_1\data.txt");
+            StreamWriter file = new StreamWriter(@"data.txt");
             file.WriteLine(sb);
             file.Close();       
             
@@ -60,7 +60,9 @@ namespace lesson_4
 
             Console.WriteLine("2nd task");
 
+            ArrayInput.LetTheMountainCome();
 
+            Console.ReadKey();
         }
     }
 }
