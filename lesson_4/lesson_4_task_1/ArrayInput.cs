@@ -64,7 +64,6 @@ namespace lesson_4
             }
 
             Console.WriteLine($"В данном массиве {countThree} пар чисел");
-            Console.ReadKey();
         }
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson_4_task_1", "lesson_4_task_1\lesson_4_task_1.csproj", "{A22A0736-9B60-4C2A-A320-C7CFDCF08DDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson_4", "lesson_4_task_1\lesson_4.csproj", "{A22A0736-9B60-4C2A-A320-C7CFDCF08DDE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson_4_task_3", "lesson_4_task_3\lesson_4_task_3.csproj", "{D6FE19A8-A0A7-4797-B3E2-446456E6A814}"
 EndProject
