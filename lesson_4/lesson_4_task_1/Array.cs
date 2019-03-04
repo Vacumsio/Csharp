@@ -56,6 +56,11 @@ namespace lesson_4
             file.Close();       
             
             Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("2nd task");
+
+
         }
     }
 }

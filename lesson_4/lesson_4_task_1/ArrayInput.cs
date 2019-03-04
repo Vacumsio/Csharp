@@ -14,33 +14,41 @@ namespace lesson_4
 {
     class ArrayInput
     {
-        public static int[] Array()
+        public static bool FilePath(string path)
         {
             try
             {
-                string inputPath = @"E:\GIT_projects\CSharp\lesson_4\lesson_4_task_1\data.txt";
-                var fs = new FileStream(inputPath, FileMode.Open, FileAccess.Read);
-                string content;
-
-                using (StreamReader reader = new StreamReader(fs, Encoding.UTF8))
-                {
-                    content = reader.ReadLine();
-                }
-
-                string[] numbers = content.Split(new char[] { ' ' });
-                int[] arr = new int[numbers.Length];
-                for (int i = 0; i < numbers.Length; i++)
-                {
-                    arr[i] = int.Parse(numbers[i]);
-                    i++;
-                }
-                return arr;
+                string _path = path;
+                Console.WriteLine("Искомый файл существует");
+                return true;
             }
-            catch(FormatException ex)
-            { Console.WriteLine(ex.Message); }            
+            catch (FormatException ex)
+            { Console.WriteLine(ex.Message); return false; }
         }
 
-        static void New()
+        public static int[] Array()
+        {                        
+            string inputPath = @"E:\GIT_projects\CSharp\lesson_4\lesson_4_task_1\dta.txt";
+            FilePath(inputPath);
+            var fs = new FileStream(inputPath, FileMode.Open, FileAccess.Read);
+            string content;
+
+            using (StreamReader reader = new StreamReader(fs, Encoding.UTF8))
+            {
+                content = reader.ReadLine();
+            }
+
+            string[] numbers = content.Split(new char[] { ' ' });
+            int[] arr = new int[numbers.Length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                arr[i] = int.Parse(numbers[i]);
+                i++;
+            }
+            return arr;
+        }
+
+        static void LetTheMountainCome()
         {
 
             int[] arr = Array();
