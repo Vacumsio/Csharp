@@ -74,45 +74,7 @@ namespace lesson_4
                 }
             }
             return countThree;
-        }
+        }      
 
-        public static int[] Array()
-        {                        
-            string inputPath = @"data.txt";
-            var fs = new FileStream(inputPath, FileMode.Open, FileAccess.Read);
-            string content;
-
-            using (StreamReader reader = new StreamReader(fs, Encoding.UTF8))
-            {
-                content = reader.ReadLine();
-            }
-
-            string[] numbers = content.Split(new char[] { ' ' });
-            int[] arr = new int[numbers.Length-1];
-
-            for (int i = 0; i < numbers.Length-1; i++)
-            {
-                arr[i] = int.Parse(numbers[i]);
-                i++;
-            }
-            return arr;
-        }
-
-        public static int LetTheMountainCome()
-        {
-            int[] arr = Array();
-
-            int countThree = 0;
-
-            for (int i = 0; i < arr.Length - 1; i++)
-            {
-                if (arr[i] % 3 == 0 && arr[i + 1] % 3 == 0)
-                {
-                    countThree++;
-                }
-            }
-            return countThree;            
-
-        }
     }
 }

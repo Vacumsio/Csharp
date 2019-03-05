@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lesson_4_task_1
+namespace lesson_4
 {
     class Array2D
     {
@@ -13,6 +13,9 @@ namespace lesson_4_task_1
         const int matrixRows = 5;
         const int matrixCols = 5;
 
+        /// <summary>
+        /// Метод для создания 2Д массива с рандомными значениями от -10000 до 10000
+        /// </summary>
         public Array2D()
         {
             matrix = new int[matrixRows, matrixCols];
@@ -26,6 +29,10 @@ namespace lesson_4_task_1
             }
         }
 
+        /// <summary>
+        /// Метод вывода двумерного массива на экран
+        /// </summary>
+        /// <returns></returns>
         public string Print2D()
         {
             string temp = String.Empty;
@@ -39,5 +46,7 @@ namespace lesson_4_task_1
             }
             return temp;
         }
+
+
     }
 }
