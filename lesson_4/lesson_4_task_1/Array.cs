@@ -24,70 +24,38 @@ namespace lesson_4
 {
     public static class Array
     {
-        public static int[] MakeArray(int a, int x)
-        {
-            int[] arr = new int[20];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = i*x;
-                Console.WriteLine($"{arr[i]}");
-            }
-            return arr;
-        }
-
-        public static int[] MakeArray(int a)
-        {
-            int[] arr = new int[a];
-            Random rnd = new Random();
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = rnd.Next(-10000, 10000);
-                Console.WriteLine($"{arr[i]}");
-            }
-            return arr;
-        }
-
-        public static int CountThree(int[] array)
-        {
-            int[] arr = array;
-            int countThree = 0;
-            
-            for (int i = 0; i < arr.Length - 1; i++)
-            {
-                if (arr[i] % 3 == 0 && arr[i + 1] % 3 == 0)
-                {
-                    countThree++;
-                }
-            }
-            return countThree;
-        }
+        
 
         public static void Main(string[] args)
         {
-            int [] arr = MakeArray(20);
-            int count = CountThree(arr);
-            Console.WriteLine($"В данном массиве {count} пар чисел");
+            ArrayInput array = new ArrayInput();
+            Console.WriteLine(array.Print1D());
+            Console.WriteLine(array.CountThree());
+
+            //int [] arr = MakeArray(20);
+            //int count = CountThree(arr);
+            //Console.WriteLine($"В данном массиве {count} пар чисел");
             
-            StringBuilder sb = new StringBuilder(arr.Length);
-            foreach (int i in arr)
-            {
-                sb.Append($"{ i} ");
-            }            
-            Console.WriteLine(sb.ToString());
+            //StringBuilder sb = new StringBuilder(arr.Length);
+            //foreach (int i in arr)
+            //{
+            //    sb.Append($"{ i} ");
+            //}            
+            //Console.WriteLine(sb.ToString());
 
-            StreamWriter file = new StreamWriter(@"data.txt");
-            file.WriteLine(sb);
-            file.Close();                   
-            Console.ReadKey();
-            Console.Clear();
+            //StreamWriter file = new StreamWriter(@"data.txt");
+            //file.WriteLine(sb);
+            //file.Close();                   
+            //Console.ReadKey();
+            //Console.Clear();
 
-            Console.WriteLine("2nd task");
-            ArrayInput.LetTheMountainCome();
-            Console.ReadKey();
-            Console.Clear();
+            //Console.WriteLine("2nd task");
+            //ArrayInput.LetTheMountainCome();
+            //Console.ReadKey();
+            //Console.Clear();
 
-            Console.WriteLine("3rd task");
-            int[] arrStep = MakeArray(20,3);
+            //Console.WriteLine("3rd task");
+            //int[] arrStep = MakeArray(20,3);
 
             Console.ReadKey();
         }
