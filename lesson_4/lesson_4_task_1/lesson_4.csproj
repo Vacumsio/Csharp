@@ -46,7 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Array.cs" />
-    <Compile Include="ArrayInput.cs" />
+    <Compile Include="Array1D.cs" />
+    <Compile Include="Array2D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

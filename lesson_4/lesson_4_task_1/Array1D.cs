@@ -9,14 +9,19 @@ using System.Collections.Generic;
 
 namespace lesson_4
 {
-    public class ArrayInput
+    public class Array1D
     {
         int[] array; //одномерный массив
         const int arraySize = 20;
         const int arrayStep = 3;
         Random r;
 
-        public ArrayInput(int arraySize, int arrayStep)
+        /// <summary>
+        /// Конструктор для создания одномерного массива с шагом
+        /// </summary>
+        /// <param name="arraySize">Размер массива</param>
+        /// <param name="arrayStep">Шаг массива</param>
+        public Array1D(int arraySize, int arrayStep)
         {
             array = new int[arraySize];
             for (int i = 0; i < array.Length; i++)
@@ -24,8 +29,12 @@ namespace lesson_4
                 array[i] = i * arrayStep;
             }
         }
-
-        public ArrayInput()
+        
+        
+        /// <summary>
+        /// Конструктор для создания одномерного массива
+        /// </summary>
+        public Array1D()
         {
             array = new int[arraySize];
             r = new Random();
@@ -34,7 +43,11 @@ namespace lesson_4
                 array[i] = r.Next(-10000, 10000);
             }
         }
-           
+
+        /// <summary>
+        /// Метод вывода на консоль значений созданного массива
+        /// </summary>
+        /// <returns>возвращает строковое значение</returns>        
         public string Print1D()
         {
             string temp = String.Empty;
@@ -45,20 +58,10 @@ namespace lesson_4
             return temp;
         }
 
-        public string Print2D()
-        {
-            string temp = String.Empty;
-            for (int i = 0; i < array.GetLength(0); i++)
-            {
-                for (int j = 0; j < array.GetLength(1); j++)
-                {
-                    temp += ($"{array[j]} ");
-                }
-                temp += "\n";
-            }            
-            return temp;
-        }
-
+        /// <summary>
+        /// Метод считающий пары чисел с условием
+        /// </summary>
+        /// <returns>Возвращает подсчитанное число пар чисел, которые делятся на 3 без остатка</returns>
         public int CountThree()
         {
             int countThree = 0;

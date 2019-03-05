@@ -28,7 +28,7 @@ namespace lesson_4
 
         public static void Main(string[] args)
         {
-            ArrayInput array = new ArrayInput();
+            Array1D array = new Array1D();
             Console.WriteLine(array.Print1D());
             Console.WriteLine(array.CountThree());
 
