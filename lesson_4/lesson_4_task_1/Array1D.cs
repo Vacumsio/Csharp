@@ -29,8 +29,7 @@ namespace lesson_4
                 array[i] = i * arrayStep;
             }
         }
-        
-        
+                
         /// <summary>
         /// Конструктор для создания одномерного массива
         /// </summary>
