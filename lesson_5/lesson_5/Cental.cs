@@ -24,12 +24,13 @@ using System.Threading.Tasks;
 */
 namespace lesson_5
 {
-    class Program
+    class Cental
     {
         static void Main(string[] args)
         {
             CheckLogin login = new CheckLogin();
-            login.NonRegular();
+            //login.NonRegular();
+            login.Regular();
             Console.ReadKey();
         }
     }

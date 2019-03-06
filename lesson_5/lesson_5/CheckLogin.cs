@@ -9,19 +9,23 @@ namespace lesson_5
 {
     class CheckLogin
     {
+        /// <summary>
+        /// Метод анализа логина не регулярными выражениями
+        /// </summary>
         public void NonRegular()
         {
+            string chekedLog = String.Empty;
+            char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+            char[] symbols = "!@#$%&?-+=~!@#$%&?-+=~-+=~".ToCharArray();
+
             Console.WriteLine("Введите логин");
             string log = Console.ReadLine();
-            log.ToUpper();
 
-            char[] arr_EN = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-            char[] arr_symb = "!@#$%&?-+=~".ToCharArray();
 
             char[] ar = new char[log.Length];
-            for (int i = 0; i < log.Length;i++)
+            for (int i = 0; i < log.Length; i++)
             {
-                ar[i] = log[i];                
+                ar[i] = log.ToUpper()[i];
             }
 
             if (char.IsDigit(ar[0]))
@@ -42,50 +46,59 @@ namespace lesson_5
                     }
                     else
                     {
-                        if (ar==arr_EN)
+                        int j = 0;
+                        for (int i = 0; j < ar.Length; i++)
                         {
-                            Console.WriteLine("Логин содержит недопустимые значения");
+                            if (ar[j] == alphabet[i])
+                            {
+                                chekedLog += alphabet[i];
+                                j++;
+                                i = 0; i--;
+                            }
+                            else
+                            {
+                                if (ar[j] == symbols[i])
+                                {
+                                    Console.WriteLine("Логин содержит недопустимые значения");
+                                    i = 0; i--; break;
+                                }
+                            }
                         }
-                        else Console.WriteLine("Введенный логин удовлетворяет требованиям");
+
+                        if (chekedLog == log.ToUpper())
+                        {
+                            Console.WriteLine("Введенный логин удовлетворяет требованиям");
+                        }
                     }
                 }
             }
-        }        
+        }
 
+        /// <summary>
+        /// Метод анализа логина регулярными выражениями
+        /// </summary>
         public void Regular()
         {
-            string pattern = @"{^[0-9][a-zA-Z0-9]}";
-            Regex regex = new Regex(pattern);
             Console.WriteLine("Введите логин");
             string userLogin = Console.ReadLine();
-
-            foreach (bool item in regex.Matches(userLogin))
+            Regex regex = new Regex(@"{[a-zA-Z0-9]}");            
+            
+            if (char.IsDigit(userLogin[0]))
             {
-                if (item)
+                Console.WriteLine("Первым симолом логина не может быть цифра");
+            }
+            else
+            {
+                if (!regex.IsMatch(userLogin))
                 {
-                    Console.WriteLine("Введенный логин удовлетворяет требованиям");
-                }
-                if (userLogin.Length < 2)
-                {
-                    Console.WriteLine("User Login is too small");
+                    Console.WriteLine("Логин содержит недопустимые значения");
                 }
                 else
                 {
-                    if (userLogin.Length > 10)
-                    {
-                        Console.WriteLine("User Login adjust max value");
-                    }
-                    else
-                    {
-                        if (userLogin == pattern)
-                        {
-                            Console.WriteLine("Логин содержит недопустимые значения");
-                        }
-                        else Console.WriteLine("Введенный логин удовлетворяет требованиям");
-                    }
+                    Console.WriteLine("Введенный логин удовлетворяет требованиям");
                 }
-
             }
         }
     }
 }
+
