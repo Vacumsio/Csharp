@@ -15,8 +15,8 @@ namespace lesson_5
         public void NonRegular()
         {
             string chekedLog = String.Empty;
-            char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-            char[] symbols = "!@#$%&?-+=~!@#$%&?-+=~-+=~".ToCharArray();
+            char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
+            char[] symbols = "!@#$%&?-+=~!@#$%&?-+=~!@#$%&?-+=~+=~".ToCharArray();
 
             Console.WriteLine("Введите логин");
             string log = Console.ReadLine();
@@ -81,21 +81,28 @@ namespace lesson_5
         {
             Console.WriteLine("Введите логин");
             string userLogin = Console.ReadLine();
-            Regex regex = new Regex(@"{[a-zA-Z0-9]}");            
-            
+            Regex regex = new Regex(@"[^a-zA-Z0-9]");
+
             if (char.IsDigit(userLogin[0]))
             {
                 Console.WriteLine("Первым симолом логина не может быть цифра");
             }
             else
             {
-                if (!regex.IsMatch(userLogin))
+                if (userLogin.Length < 2 || userLogin.Length > 10)
                 {
-                    Console.WriteLine("Логин содержит недопустимые значения");
+                    Console.WriteLine("Логин должен быть больше 2 и меньше 10 символов");
                 }
                 else
                 {
-                    Console.WriteLine("Введенный логин удовлетворяет требованиям");
+                    if (regex.IsMatch(userLogin))
+                    {
+                        Console.WriteLine("Логин содержит недопустимые значения");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Введенный логин удовлетворяет требованиям");
+                    }
                 }
             }
         }
