@@ -38,11 +38,11 @@ namespace DoubleBinary
             fs.Close();
             return min;
         }
-        static void Main(string[] args)
-        {
-            SaveFunc("data.bin", -100, 100, 0.5);
-            Console.WriteLine(Load("data.bin"));
-            Console.ReadKey();
-        }
+        //static void Main(string[] args)
+        //{
+        //    SaveFunc("data.bin", -100, 100, 0.5);
+        //    Console.WriteLine(Load("data.bin"));
+        //    Console.ReadKey();
+        //}
     }
 }
