@@ -34,7 +34,7 @@ namespace lesson_6
             Delegates.Table(new Fun(Delegates.MyFunc), 1, -2, 2);
             Console.WriteLine("\n");
             Console.WriteLine("Таблица функции Sin:");
-            Delegates.Table(Delegates.Sinus, 3, -2, 2);
+            Delegates.Table(new Fun(Delegates.Sinus), 3, -2, 2);
             Console.ReadKey();
         }
     }
