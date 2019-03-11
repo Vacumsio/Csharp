@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
-    1.Изменить программу вывода таблицы функции так, чтобы можно было передавать функции типа double (double, double). 
-    Продемонстрировать работу на функции с функцией a*x^2 и функцией a*sin(x).
++    1.Изменить программу вывода таблицы функции так, чтобы можно было передавать функции типа double (double, double). 
++    Продемонстрировать работу на функции с функцией a*x^2 и функцией a*sin(x).
  
-    2.Модифицировать программу нахождения минимума функции так, чтобы можно было передавать функцию в виде делегата.
++    2.Модифицировать программу нахождения минимума функции так, чтобы можно было передавать функцию в виде делегата.
     а) Сделать меню с различными функциями и представить пользователю выбор, для какой функции и на каком отрезке находить минимум. 
     Использовать массив (или список) делегатов, в котором хранятся различные функции.
     б) *Переделать функцию Load, чтобы она возвращала массив считанных значений. Пусть она возвращает минимум через параметр (с использованием модификатора out). 
@@ -24,18 +24,20 @@ using System.Threading.Tasks;
 
  */
 
-namespace lesson_6
-{
-    class MainClass
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Таблица функции MyFunc:");
-            Delegates.Table(new Fun(Delegates.MyFunc), 1, -2, 2);
-            Console.WriteLine("\n");
-            Console.WriteLine("Таблица функции Sin:");
-            Delegates.Table(new Fun(Delegates.Sinus), 3, -2, 2);
-            Console.ReadKey();
-        }
-    }
-}
+//namespace lesson_6
+//{
+//    class MainClass
+//    {
+//        static void Main(string[] args)
+//        {
+//            Console.WriteLine("Таблица функции MyFunc:");
+//            Delegates.Table(new Fun(Delegates.MyFunc), 1, -2, 2);
+//            Console.WriteLine("\n");
+//            Console.WriteLine("Таблица функции Sin:");
+//            Delegates.Table(new Fun(Delegates.Sinus), 3, -2, 2);
+//            FindMin.SaveFunc(new Min(FindMin.Func), "data.bin", -100, 100, 0.5);
+//            Console.WriteLine(FindMin.Load("data.bin")); 
+//            Console.ReadKey();
+//        }
+//    }
+//}

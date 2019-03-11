@@ -1,15 +1,19 @@
 ﻿using System;
 using System.IO;
 
-namespace DoubleBinary
+namespace lesson_6
 {
+
+    public delegate double Min(double x);
+
     class FindMin
     {
-        public static double F(double x)
+        public static double Func(double x)
         {
             return x * x - 50 * x + 10;
         }
-        public static void SaveFunc(string fileName, double a, double b, double h)
+
+        public static void SaveFunc(Min F, string fileName, double a, double b, double h)
         {
             FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
             BinaryWriter bw = new BinaryWriter(fs);
@@ -17,11 +21,12 @@ namespace DoubleBinary
             while (x <= b)
             {
                 bw.Write(F(x));
-                x += h;// x=x+h;
+                x += h;
             }
             bw.Close();
             fs.Close();
         }
+
         public static double Load(string fileName)
         {
             FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -30,7 +35,6 @@ namespace DoubleBinary
             double d;
             for (int i = 0; i < fs.Length / sizeof(double); i++)
             {
-                // Считываем значение и переходим к следующему
                 d = bw.ReadDouble();
                 if (d < min) min = d;
             }
@@ -38,11 +42,5 @@ namespace DoubleBinary
             fs.Close();
             return min;
         }
-        //static void Main(string[] args)
-        //{
-        //    SaveFunc("data.bin", -100, 100, 0.5);
-        //    Console.WriteLine(Load("data.bin"));
-        //    Console.ReadKey();
-        //}
     }
 }
