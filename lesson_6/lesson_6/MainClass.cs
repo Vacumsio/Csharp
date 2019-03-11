@@ -13,9 +13,9 @@ using System.Threading.Tasks;
     Использовать массив (или список) делегатов, в котором хранятся различные функции.
     б) *Переделать функцию Load, чтобы она возвращала массив считанных значений. Пусть она возвращает минимум через параметр (с использованием модификатора out). 
  
-    3.Переделать программу Пример использования коллекций для решения следующих задач:
-    а) Подсчитать количество студентов учащихся на 5 и 6 курсах;
-    б) подсчитать сколько студентов в возрасте от 18 до 20 лет на каком курсе учатся (*частотный массив);
++    3.Переделать программу Пример использования коллекций для решения следующих задач:
++    а) Подсчитать количество студентов учащихся на 5 и 6 курсах;
++    б) подсчитать сколько студентов в возрасте от 18 до 20 лет на каком курсе учатся (*частотный массив);
     в) отсортировать список по возрасту студента;
     г) *отсортировать список по курсу и возрасту студента;
     
@@ -24,20 +24,21 @@ using System.Threading.Tasks;
 
  */
 
-//namespace lesson_6
-//{
-//    class MainClass
-//    {
-//        static void Main(string[] args)
-//        {
-//            Console.WriteLine("Таблица функции MyFunc:");
-//            Delegates.Table(new Fun(Delegates.MyFunc), 1, -2, 2);
-//            Console.WriteLine("\n");
-//            Console.WriteLine("Таблица функции Sin:");
-//            Delegates.Table(new Fun(Delegates.Sinus), 3, -2, 2);
-//            FindMin.SaveFunc(new Min(FindMin.Func), "data.bin", -100, 100, 0.5);
-//            Console.WriteLine(FindMin.Load("data.bin")); 
-//            Console.ReadKey();
-//        }
-//    }
-//}
+namespace lesson_6
+{
+    class MainClass
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Таблица функции MyFunc:");
+            Delegates.Table(new Fun(Delegates.MyFunc), 1, -2, 2);
+            Console.WriteLine("\n");
+            Console.WriteLine("Таблица функции Sin:");
+            Delegates.Table(new Fun(Delegates.Sinus), 3, -2, 2);
+            FindMin.SaveFunc(new Min(FindMin.Func), "data.bin", -100, 100, 0.5);
+            Console.WriteLine(FindMin.Load("data.bin"));
+
+            Console.ReadKey();
+        }
+    }
+}
