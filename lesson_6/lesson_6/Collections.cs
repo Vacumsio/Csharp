@@ -10,15 +10,17 @@ namespace lesson_6
 {
     class Collections
     {
-        static int MyDelegat(Student st1, Student st2)          // Создаем метод для сравнения для экземпляров
+        static int MyDelegat(Student st1, Student st2)
         {                                
-            return String.Compare(st1.firstName, st2.firstName);          // Сравниваем две строки
+            return String.Compare(st1.firstName, st2.firstName);
         }
     static void Main(string[] args)
     {
         int bakalavr = 0;
         int magistr = 0;
-        List<Student> list = new List<Student>();                             // Создаем список студентов
+        int bakalavr18 = 0;
+        int magistr18 = 0;
+        List<Student> list = new List<Student>();
         DateTime dt = DateTime.Now;
         StreamReader sr = new StreamReader("students_4.csv");
         while (!sr.EndOfStream)
@@ -26,24 +28,28 @@ namespace lesson_6
             try
             {
                 string[] s = sr.ReadLine().Split(';');
-                // Добавляем в список новый экземпляр класса Student
                 list.Add(new Student(s[0], s[1], s[2], s[3], s[4], int.Parse(s[5]), int.Parse(s[6]), int.Parse(s[7]), s[8]));
-                // Одновременно подсчитываем количество бакалавров и магистров
                 if (int.Parse(s[6]) < 5) bakalavr++; else magistr++;
+                if (int.Parse(s[5]) >= 18 && int.Parse(s[5])<=20)
+                    {
+                        if (int.Parse(s[6]) < 5) bakalavr18++; else magistr18++;
+                    }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 Console.WriteLine("Ошибка!ESC - прекратить выполнение программы");
-                // Выход из Main
                 if (Console.ReadKey().Key == ConsoleKey.Escape) return;
             }
         }
         sr.Close();
         list.Sort(new Comparison<Student>(MyDelegat));
         Console.WriteLine("Всего студентов:" + list.Count);
-        Console.WriteLine("Магистров:{0}", magistr);
-        Console.WriteLine("Бакалавров:{0}", bakalavr);
+        Console.WriteLine("Магистров: {0}", magistr);
+        Console.WriteLine("Бакалавров: {0}", bakalavr);
+        Console.WriteLine("Магистров в возрасте от 18 до 20: {0}", magistr18);
+        Console.WriteLine("Бакалавров в возрасте от 18 до 20: {0}", bakalavr18);
+
         //foreach (var v in list) Console.WriteLine(v.firstName);
         Console.WriteLine(DateTime.Now - dt);
         Console.ReadKey();
