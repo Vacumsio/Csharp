@@ -10,9 +10,13 @@ namespace lesson_6
 {
     class Collections
     {
-        static int MyDelegat(Student st1, Student st2)
+        static int StudentName(Student st1, Student st2)
         {
             return String.Compare(st1.firstName, st2.firstName);
+        }
+        static int StudentAge(Student st1, Student st2)
+        {
+            return st1.age.CompareTo(st2.age);
         }
 
         static void Main(string[] args)
@@ -22,7 +26,7 @@ namespace lesson_6
             int bakalavr18 = 0;
             int magistr18 = 0;
             List<Student> list = new List<Student>();
-            DateTime dt = DateTime.Now;
+            
             StreamReader sr = new StreamReader("students_4.csv");
             while (!sr.EndOfStream)
             {
@@ -44,15 +48,16 @@ namespace lesson_6
                 }
             }
             sr.Close();
-            list.Sort(new Comparison<Student>(MyDelegat));
+            list.Sort(new Comparison<Student>(StudentName));
+            list.Sort(new Comparison<Student>(StudentAge));
             Console.WriteLine("Всего студентов:" + list.Count);
             Console.WriteLine("Магистров: {0}", magistr);
             Console.WriteLine("Бакалавров:{0}", bakalavr);
             Console.WriteLine("Магистров в возрасте от 18 до 20: {0}", magistr18);
             Console.WriteLine("Бакалавров в возрасте от 18 до 20: {0}", bakalavr18);
-
-            //foreach (var v in list) Console.WriteLine(v.firstName);
-            Console.WriteLine(DateTime.Now - dt);
+            foreach (var v in list) Console.WriteLine(v.age);
+            foreach (var v in list) Console.WriteLine(v.firstName);
+            
             Console.ReadKey();
         }
     }

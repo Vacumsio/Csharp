@@ -24,21 +24,21 @@ using System.Threading.Tasks;
 
  */
 
-namespace lesson_6
-{
-    class MainClass
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Таблица функции MyFunc:");
-            Delegates.Table(new Fun(Delegates.MyFunc), 1, -2, 2);
-            Console.WriteLine("\n");
-            Console.WriteLine("Таблица функции Sin:");
-            Delegates.Table(new Fun(Delegates.Sinus), 3, -2, 2);
-            FindMin.SaveFunc(new Min(FindMin.Func), "data.bin", -100, 100, 0.5);
-            Console.WriteLine(FindMin.Load("data.bin"));
+//namespace lesson_6
+//{
+//    class MainClass
+//    {
+//        static void Main(string[] args)
+//        {
+//            Console.WriteLine("Таблица функции MyFunc:");
+//            Delegates.Table(new Fun(Delegates.MyFunc), 1, -2, 2);
+//            Console.WriteLine("\n");
+//            Console.WriteLine("Таблица функции Sin:");
+//            Delegates.Table(new Fun(Delegates.Sinus), 3, -2, 2);
+//            FindMin.SaveFunc(new Min(FindMin.Func), "data.bin", -100, 100, 0.5);
+//            Console.WriteLine(FindMin.Load("data.bin"));
 
-            Console.ReadKey();
-        }
-    }
-}
+//            Console.ReadKey();
+//        }
+//    }
+//}

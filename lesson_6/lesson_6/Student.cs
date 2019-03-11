@@ -10,7 +10,7 @@
         public string department;
         public int group;
         public string city;
-        int age;
+        public int age;
         // Создаем конструктор
         public Student(string firstName, string lastName, string university, string faculty, string department, int course, int age, int group, string city)
         {
@@ -24,5 +24,6 @@
             this.group = group;
             this.city = city;
         }
+
     }
 }
