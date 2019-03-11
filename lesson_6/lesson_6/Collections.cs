@@ -48,7 +48,7 @@ namespace lesson_6
                 }
             }
             sr.Close();
-            list.Sort(new Comparison<Student>(StudentName));
+            //list.Sort(new Comparison<Student>(StudentName));
             list.Sort(new Comparison<Student>(StudentAge));
             Console.WriteLine("Всего студентов:" + list.Count);
             Console.WriteLine("Магистров: {0}", magistr);
@@ -56,7 +56,7 @@ namespace lesson_6
             Console.WriteLine("Магистров в возрасте от 18 до 20: {0}", magistr18);
             Console.WriteLine("Бакалавров в возрасте от 18 до 20: {0}", bakalavr18);
             foreach (var v in list) Console.WriteLine(v.age);
-            foreach (var v in list) Console.WriteLine(v.firstName);
+            //foreach (var v in list) Console.WriteLine(v.firstName);
             
             Console.ReadKey();
         }
