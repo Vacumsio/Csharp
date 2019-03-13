@@ -16,13 +16,14 @@ namespace lesson_7
         {
             InitializeComponent();
             this.Text = "Игра в Угадайку";
-
-
+            lblGame.Text = "Игра в Угадайку";
+            btnCheck.Text = "";
+            Random rand = new Random(100);            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
