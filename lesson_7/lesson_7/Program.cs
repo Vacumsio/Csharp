@@ -26,7 +26,6 @@ namespace lesson_7
         [STAThread]
         static void Main()
         {
-            MessageBox.Show("Добро пожаловать в программу удвоитель");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form2());

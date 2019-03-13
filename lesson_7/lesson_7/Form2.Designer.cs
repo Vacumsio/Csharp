@@ -83,6 +83,7 @@
             this.btnStart2.TabIndex = 4;
             this.btnStart2.Text = "button2";
             this.btnStart2.UseVisualStyleBackColor = true;
+            this.btnStart2.Click += new System.EventHandler(this.btnStart_2);
             // 
             // Form2
             // 

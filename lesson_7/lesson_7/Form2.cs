@@ -20,6 +20,7 @@ namespace lesson_7
             lblMain.Text = "Главное меню";
             lblGame1.Text = "Игра \"Удвоитель\"";
             lblGame2.Text = "Игра \"Угадай число\"";
+            this.Text = "Главное меню";
         }
 
 
@@ -32,6 +33,8 @@ namespace lesson_7
 
         private void btnStart_2(object sender, EventArgs e)
         {
+            Form3 f = new Form3();
+            f.ShowDialog();
         }
 
     }

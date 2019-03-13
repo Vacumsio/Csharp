@@ -15,6 +15,14 @@ namespace lesson_7
         public Form3()
         {
             InitializeComponent();
+            this.Text = "Игра в Угадайку";
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
