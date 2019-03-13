@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2CA7D01F-0037-48A3-985A-EE8E7C34E84A}</ProjectGuid>
+    <ProjectGuid>{F420E560-6519-4AD8-A43A-C4E0D27AF001}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>lesson_5</RootNamespace>
-    <AssemblyName>lesson_5</AssemblyName>
+    <RootNamespace>lesson_6</RootNamespace>
+    <AssemblyName>lesson_6</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cental.cs" />
-    <Compile Include="CheckLogin.cs" />
-    <Compile Include="Message.cs" />
+    <Compile Include="Collections.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="FindMin.cs" />
+    <Compile Include="MainClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
