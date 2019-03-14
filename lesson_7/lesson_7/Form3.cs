@@ -17,7 +17,7 @@ namespace lesson_7
             InitializeComponent();
             this.Text = "Игра в Угадайку";
             lblGame.Text = "Игра в Угадайку";
-            btnCheck.Text = "";
+            btnCheck.Text = "Угадал?";
             Random rand = new Random(100);            
             
         }
