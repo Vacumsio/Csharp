@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace BelieveOrNotBelieve
 {
-    static class Program
+    static class MainClass
     {
         /// <summary>
         /// Главная точка входа для приложения.
