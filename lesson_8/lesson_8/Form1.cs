@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace lesson_8
+namespace BelieveOrNotBelieve
 {
     public partial class Form1 : Form
     {

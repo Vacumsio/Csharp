@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace lesson_8
+namespace BelieveOrNotBelieve
 {
     static class Program
     {

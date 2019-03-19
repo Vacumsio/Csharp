@@ -1,4 +1,4 @@
-﻿namespace lesson_8
+﻿namespace BelieveOrNotBelieve
 {
     partial class Form1
     {
